@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon Profil RGPD</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Bienvenue sur votre espace personnel</h1>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#profil">Mon Profil</a></li>
+        <li><a href="#inscription">Inscription</a></li>
+        <li><a href="#confidentialite">Politique</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil">
+      <h2>Accueil</h2>
+      <p>Ce site vous permet de consulter, gérer et simuler la suppression de vos données personnelles dans le respect du RGPD.</p>
+      <h3>Démarche responsable</h3>
+      <p>Nous collectons un minimum d'informations, respectons les standards d'accessibilité et proposons un thème sombre.</p>
+    </section>
+
+    <section id="profil">
+      <h2>Mon Profil</h2>
+      <div>
+        <p><strong>Nom :</strong> Dupont</p>
+        <p><strong>Prénom :</strong> Alice</p>
+        <p><strong>Email :</strong> alice.dupont@example.com</p>
+        <button onclick="modifierProfil()">Modifier</button>
+        <button onclick="exporterProfil()">Exporter les données</button>
+        <button onclick="confirmerSuppression()">Supprimer le compte</button>
+      </div>
+    </section>
+
+    <section id="inscription">
+      <h2>Inscription</h2>
+      <form onsubmit="return verifierConsentement()">
+        <label>Nom : <input type="text" name="nom" required></label><br>
+        <label>Email : <input type="email" name="email" required></label><br>
+        <label>Mot de passe : <input type="password" name="mdp" required></label><br>
+        <label><input type="checkbox" id="consentement"> J'accepte la politique de confidentialité</label><br>
+        <p>Les données sont conservées 1 an puis archivées.</p>
+        <button type="submit">S'inscrire</button>
+        <p><a href="#confidentialite">Lire la politique de confidentialité</a></p>
+      </form>
+    </section>
+
+    <section id="confidentialite">
+      <h2>Politique de confidentialité</h2>
+      <p>Nous collectons uniquement les informations nécessaires à la simulation de votre profil. Ces données ne sont pas réellement stockées.</p>
+      <p>Les données sont utilisées pour démontrer une interface conforme au RGPD. Aucune transmission à des tiers.</p>
+    </section>
+  </main>
+
+  <footer>
+    <button onclick="toggleTheme()">🌙 / ☀️ Thème</button>
+    <p>&copy; 2025 - Site éducatif RGPD | Développé par Pierre Lescombe</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
